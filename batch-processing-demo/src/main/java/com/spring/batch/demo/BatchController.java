@@ -34,7 +34,6 @@ public class BatchController {
 
     @GetMapping("/job2/{param}")
     public void startCsvJob(@PathVariable("param") String param) throws Exception{
-        System.out.println("KKKKKKKKKKKKKKKKKKKKKKKKK");
         JobParameters params = new JobParametersBuilder().addString("PARAM",param).toJobParameters();
         jobLauncher.run(job2,params);
     }
